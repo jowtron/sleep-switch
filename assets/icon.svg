@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="tile"><rect x="100" y="100" width="824" height="824" rx="185"/></clipPath>
+    <linearGradient id="night" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#18204a"/>
+      <stop offset="1" stop-color="#34449a"/>
+    </linearGradient>
+    <linearGradient id="day" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffd166"/>
+      <stop offset="1" stop-color="#ff8f3c"/>
+    </linearGradient>
+    <mask id="crescent">
+      <circle cx="372" cy="380" r="150" fill="#fff"/>
+      <circle cx="448" cy="318" r="128" fill="#000"/>
+    </mask>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="125%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000" flood-opacity="0.28"/>
+    </filter>
+  </defs>
+
+  <g filter="url(#shadow)">
+    <g clip-path="url(#tile)">
+      <rect x="100" y="100" width="824" height="824" fill="url(#day)"/>
+      <polygon points="100,100 924,100 100,924" fill="url(#night)"/>
+    </g>
+  </g>
+
+  <!-- night: moon and stars -->
+  <rect x="200" y="200" width="350" height="350" fill="#f5f1e3" mask="url(#crescent)"/>
+  <g fill="#f5f1e3">
+    <circle cx="560" cy="210" r="11"/>
+    <circle cx="640" cy="290" r="7"/>
+    <circle cx="215" cy="590" r="8"/>
+    <circle cx="470" cy="520" r="6"/>
+  </g>
+
+  <!-- day: sun -->
+  <g transform="translate(652 652)" fill="#fffaf0" stroke="#fffaf0" stroke-width="30" stroke-linecap="round">
+    <circle r="88" stroke="none"/>
+    <g>
+      <line x1="0" y1="-122" x2="0" y2="-165"/>
+      <line x1="0" y1="122" x2="0" y2="165"/>
+      <line x1="-122" y1="0" x2="-165" y2="0"/>
+      <line x1="122" y1="0" x2="165" y2="0"/>
+      <line x1="86" y1="86" x2="117" y2="117"/>
+      <line x1="-86" y1="-86" x2="-117" y2="-117"/>
+      <line x1="86" y1="-86" x2="117" y2="-117"/>
+      <line x1="-86" y1="86" x2="-117" y2="117"/>
+    </g>
+  </g>
+</svg>
